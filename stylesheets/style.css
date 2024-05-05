@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fauna+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../resources/background.jpg");
+  background-size: cover;
+  background-position: right 0px bottom;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #4b254d;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+@media (min-width: 810px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0, 1.75rem;
+  }
+}
+header .contenedorTitulo {
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .contenedorTitulo h1 {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fddbf8;
+  font-size: 23px;
+}
+@media (min-width: 810px) {
+  header .contenedorTitulo h1 {
+    font-size: 37px;
+  }
+}
+@media (min-width: 1024px) {
+  header .contenedorTitulo h1 {
+    font-size: 45px;
+  }
+}
+header .contenedorTitulo h1 a {
+  color: #fddbf8;
+  text-decoration: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  gap: 1rem;
+}
+header .contenedorTitulo h1 a:hover {
+  color: #9ca3af;
+  cursor: pointer;
+}
+header .contenedorTitulo h1 #iconito {
+  -webkit-text-stroke: #4b254d 2.5px;
+}
+@media (min-width: 810px) {
+  header .contenedorTitulo h1 #iconito {
+    -webkit-text-stroke: #4b254d 4px;
+  }
+}
+@media (min-width: 1024px) {
+  header .contenedorTitulo h1 #iconito {
+    -webkit-text-stroke: #4b254d 5px;
+  }
+}
+header .contenedorTitulo div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+header .contenedorTitulo div #botonHamburguesa {
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+@media (min-width: 810px) {
+  header .contenedorTitulo div #botonHamburguesa {
+    display: none;
+  }
+  header .contenedorTitulo div #botonHamburguesa:hover {
+    color: #9ca3af;
+  }
+}
+header .contenedorTitulo div #botonCruz {
+  font-size: 1.875rem;
+  cursor: pointer;
+  display: none;
+}
+@media (min-width: 810px) {
+  header .contenedorTitulo div #botonCruz {
+    display: none;
+  }
+  header .contenedorTitulo div #botonCruz:hover {
+    color: #9ca3af;
+  }
+}
+header #lineaSeparacion {
+  height: 2px;
+  width: 100%;
+  background-color: #fddbf8;
+  display: none;
+}
+@media (min-width: 810px) {
+  header #lineaSeparacion {
+    display: none;
+  }
+}
+header nav {
+  width: 100%;
+  display: none;
+  background-color: transparent;
+}
+@media (min-width: 810px) {
+  header nav {
+    display: inline-block;
+    width: fit-content;
+  }
+}
+header nav #seleccionSecciones {
+  font-family: "Fauna One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+@media (min-width: 810px) {
+  header nav #seleccionSecciones {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+  }
+}
+header nav ul {
+  list-style-type: none;
+  color: #fddbf8;
+  font-size: 23px;
+}
+@media (min-width: 810px) {
+  header nav ul {
+    font-size: 17px;
+  }
+}
+header nav ul a {
+  color: #fddbf8;
+  text-decoration: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+header nav ul a:hover {
+  color: #9ca3af;
+  cursor: pointer;
+}
+header nav i {
+  width: 1.25rem;
+}
+
+.principal video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+@media (min-width: 1280px) {
+  .principal video {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.principal .nada {
+  min-height: calc(100vh - 96.4px);
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .principal .nada {
+    min-height: calc(100vh - 106px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 810px) {
+  .principal .nada {
+    min-height: calc(100vh - 128px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .principal .nada {
+    min-height: calc(100vh - 138px);
+    margin-top: 10px;
+  }
+}
+
+/* .seccionBusqueda {
+	position: relative;
+	width: 100vw;
+} */
+.buscar .encabezadoBuscar {
+  background-color: rgba(0, 0, 0, 0.279);
+  font-family: "Fauna One", serif;
+  font-size: x-small;
+  color: #fddbf8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 7px;
+}
+@media (min-width: 640px) {
+  .buscar .encabezadoBuscar {
+    font-size: small;
+  }
+}
+.buscar h2 {
+  display: inline-block;
+  margin-right: 20px;
+}
+.buscar .seccionCards {
+  min-height: calc(100vh - 176px);
+  margin: 0;
+}
+@media (min-width: 439px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 163px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 541px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 162px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 636px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 163px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 639px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 162px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 640px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 168px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 792px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 168px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 804px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 144px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 810px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 192px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 837px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 166px);
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .buscar .seccionCards {
+    min-height: calc(100vh - 176px);
+    margin-top: 10px;
+  }
+}
+.buscar .seccionCards .contenedorCards {
+  margin: 0;
+  border-radius: 0rem;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 640px) {
+  .buscar .seccionCards .contenedorCards {
+    border-radius: 1.1rem;
+    margin: 10px 40px 0;
+    padding: 15px 40px;
+  }
+}
+.buscar .displayDetalleCard {
+  background-color: rgba(243, 204, 217, 0.903);
+  border-radius: 1.1rem;
+  margin: auto;
+  border-radius: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10px;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard {
+    border-radius: 1.1rem;
+    margin: 10px 40px 0;
+    padding: 15px 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .buscar .displayDetalleCard {
+    flex-direction: row;
+  }
+}
+.buscar .displayDetalleCard .detalleCard {
+  font-family: "Fauna One", serif;
+  font-size: small;
+  width: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  padding: 3vh 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #fedbfe;
+}
+.buscar .displayDetalleCard .detalleCard .contenedorImagen .imagen {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  float: right;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GtVh-swPhy4aO4t60sOFnpg0yhGRcCFTqhnmnwKFKQ&s");
+  background-size: cover;
+}
+.buscar .displayDetalleCard .detalleCard .contenedorImagen p {
+  text-align: justify;
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard .detalleCard .contenedorImagen {
+    flex-direction: row;
+  }
+}
+.buscar .displayDetalleCard .detalleCard button {
+  width: 50px;
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 2px 7px;
+  width: 60px;
+  background-color: #be8fc0;
+  color: white;
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard .detalleCard button {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .buscar .displayDetalleCard .detalleCard button {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard .detalleCard button {
+    width: 80px;
+  }
+}
+.buscar .displayDetalleCard .detalleCard button:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.buscar .displayDetalleCard .detalleCard .contenedorEtiquetas {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5px;
+}
+.buscar .displayDetalleCard .detalleCard span {
+  padding: 1px 7px;
+  background-color: #a7dff7;
+  border: solid rgb(198, 177, 177) 1px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard .detalleCard {
+    width: 100%;
+  }
+}
+.buscar .displayDetalleCard .edicionCard {
+  font-family: "Fauna One", serif;
+  font-size: small;
+  width: 100%;
+  padding: 3vh 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  border-radius: 1rem;
+  background-color: #fedbfe;
+}
+.buscar .displayDetalleCard .edicionCard textarea {
+  width: auto;
+  border-radius: 7px;
+  padding: 8px;
+}
+.buscar .displayDetalleCard .edicionCard input {
+  width: auto;
+  border-radius: 7px;
+  height: 20px;
+  padding: 8px;
+}
+.buscar .displayDetalleCard .edicionCard button {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 2px 7px;
+  width: 130px;
+  background-color: #be8fc0;
+  color: white;
+}
+@media (min-width: 640px) {
+  .buscar .displayDetalleCard .edicionCard button {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .buscar .displayDetalleCard .edicionCard button {
+    font-size: 0.8rem;
+  }
+}
+.buscar .displayDetalleCard .edicionCard button:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.buscar .filtros {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.buscar .filtros select {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+}
+@media (min-width: 640px) {
+  .buscar .filtros select {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .buscar .filtros select {
+    font-size: 0.8rem;
+  }
+}
+.buscar .botonesBusqueda button {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 2px 7px;
+  width: 60px;
+  background-color: #be8fc0;
+  color: white;
+}
+@media (min-width: 640px) {
+  .buscar .botonesBusqueda button {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .buscar .botonesBusqueda button {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .buscar .botonesBusqueda button {
+    width: 80px;
+  }
+}
+.buscar .botonesBusqueda button:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+
+.modalMensaje {
+  font-family: "Fauna One", serif;
+  font-size: small;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(243, 204, 217, 0.903);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+.modalMensaje .mensajePopup {
+  width: 300px;
+  padding: 20px;
+  margin: 0 2px;
+  border-radius: 8px;
+  border: solid gray 1px;
+  background-color: #fedbfe;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.modalMensaje .mensajePopup .botonesPopup {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: space-around;
+}
+.modalMensaje .mensajePopup .botonesPopup button {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 2px 7px;
+  width: 60px;
+  background-color: #be8fc0;
+  color: white;
+}
+@media (min-width: 640px) {
+  .modalMensaje .mensajePopup .botonesPopup button {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .modalMensaje .mensajePopup .botonesPopup button {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .modalMensaje .mensajePopup .botonesPopup button {
+    width: 80px;
+  }
+}
+.modalMensaje .mensajePopup .botonesPopup button:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+
+.modalSpinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(243, 204, 217, 0.903);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+.modalSpinner .fondoSpinner img {
+  height: 120px;
+  width: 120px;
+}
+
+footer {
+  font-family: "Fauna One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  color: white;
+}
+footer a {
+  color: #fddbf8;
+  text-decoration: none;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  display: inline;
+}
+footer a:hover {
+  color: #9ca3af;
+  cursor: pointer;
+}
+footer div {
+  padding: 0.4rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (min-width: 810px) {
+  footer {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
