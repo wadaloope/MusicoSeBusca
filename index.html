@@ -15,7 +15,7 @@
 	<header>
 		<div class="contenedorTitulo">
 			<h1><a href="#">
-				<i id="iconito" class="fa-solid fa-music"></i>
+				<i id="notaMusical" class="fa-solid fa-music"></i>
 				MÚSICO SE BUSCA</a>
 			<h1>
 			<div class="iconosMenuMobile">
@@ -38,64 +38,88 @@
 		</nav>
 	</header>
 	<main>
-		<section class="principal" style="display: none;">	
+		<section class="home" style="display: none;">	
 			<video autoplay muted loop style="filter: saturate(2) hue-rotate(28deg) blur(1.5px);">
 				<source src="resources/video.mp4" type="video/mp4">
 				Tu navegador no soporta etiquetas de video.
 			</video>
-			<div class="nada"></div>
+			<div class="areaDeRelleno"></div>
 		</section>
-		<section class="buscar">
-			<div class="seccionBusqueda">
-				<div class="encabezadoBuscar">
-					<h2>Encuentra tu nueva banda</h2>
-					<div class="filtros">
-						<select>
-							<option value="Ubicacion">Ubicacion</option>
-							<option value="Cordoba">Cordoba</option>		
-							<option value="Santa Fe">Santa Fe</option>
-							<option value="Buenos Aires">Buenos Aires</option>		
-							<option value="Corrientes">Corrientes</option>
-						</select>
-					 	<select>
-						 	<option value="Instrumento">Instrumento</option>				
-						 	<option value="Guitarrista">Guitarrista</option>
-						 	<option value="Bajista">Bajista</option>		
-						 	<option value="Percusionista">Percusionista</option>
-						 	<option value="Tecladista">Tecladista</option>		
-						 	<option value="Vocales">Vocales</option>
-						 	<option value="Saxofonista">Saxofonista</option>		
-						 	<option value="Acordeonista">Acordeonista</option>
-						 	<option value="Violinista">Violinista</option>
-							<option value="Otros">Otros</option>
-					 	</select>
-					 	<select>
-							<option value="Género Musical">Género Musical</option>				
-							<option value="Rock and Roll">Rock and Roll</option>
-							<option value="Pop">Pop</option>		
-							<option value="Ritmos latinos">Ritmos latinos</option>
-							<option value="Tango">Tango</option>		
-							<option value="Heavy Metal">Heavy Metal</option>
-							<option value="Folclore">Folclore</option>		
-							<option value="Clásico">Clásico</option>
-							<option value="Religioso">Religioso</option>
-							<option value="Otros">Otros</option>
-						</select>
+		<section class="seccionBuscar" style="display: none;">
+			<div class="encabezadoBuscar">
+				<h2>Encuentra tu nueva banda</h2>
+				<div class="filtrosBusqueda">
+					<select class="ubicacionAviso">
+						<option class="ubicacion" value="Ubicacion">Ubicacion</option>
+						<option class="ubicacion" value="Cordoba">Cordoba</option>		
+						<option class="ubicacion" value="Santa Fe">Santa Fe</option>
+						<option class="ubicacion" value="Buenos Aires">Buenos Aires</option>		
+						<option class="ubicacion" value="Corrientes">Corrientes</option>
+					</select>
+				 	<select class="instrumentoMusical">
+					 	<option class="instrumento" value="Instrumento">Instrumento</option>				
+					 	<option class="instrumento" value="Guitarrista">Guitarrista</option>
+					 	<option class="instrumento" value="Bajista">Bajista</option>		
+					 	<option class="instrumento" value="Percusionista">Percusionista</option>
+					 	<option class="instrumento" value="Tecladista">Tecladista</option>		
+					 	<option class="instrumento" value="Vocales">Vocales</option>
+					 	<option class="instrumento" value="Saxofonista">Saxofonista</option>		
+					 	<option class="instrumento" value="Acordeonista">Acordeonista</option>
+					 	<option class="instrumento" value="Violinista">Violinista</option>
+						<option class="instrumento" value="Otros">Otros</option>
+				 	</select>
+				 	<select class="generoMusical">
+						<option class="genero" value="Género Musical">Género Musical</option>				
+						<option class="genero" value="Rock and Roll">Rock and Roll</option>
+						<option class="genero" value="Pop">Pop</option>		
+						<option class="genero" value="Ritmos latinos">Ritmos latinos</option>
+						<option class="genero" value="Tango">Tango</option>		
+						<option class="genero" value="Heavy Metal">Heavy Metal</option>
+						<option class="genero" value="Folclore">Folclore</option>		
+						<option class="genero" value="Clásico">Clásico</option>
+						<option class="genero" value="Religioso">Religioso</option>
+						<option class="genero" value="Otros">Otros</option>
+					</select>
+				</div>
+				<div class="botonesBusqueda">
+					<button class="aceptar">Buscar</button>
+					<button class="cancelar">Limpiar</button>
+				</div>
+			</div> 
+			<div class="avisosEncontrados">
+				<div class="contenedorCards"style="display: none;">
+					<div class="tarjetaEncontrada">
+						<h3 class="tituloTarjeta">Guitarrista profesional</h3>
+						<div class="contenedorImagenSmall">
+							<div class="imagen"></div>
+							<p class="descripcionTarjeta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, similique vero neque dolores eaque provident ab exercitationem. Laborum sequi dolorum accusantium? Atque, saepe doloremque. Dolor ullam, nam sed minus molestiae veniam accusantium explicabo magni ab reiciendis eligendi et exercitationem temporibus iste, rem corrupti amet culpa! Quas reiciendis ipsa facere!</p>
+						</div>
+						<div class="contenedorEtiquetas">
+							<span class="etiquetaDetalle">escabio</span>
+							<span class="etiquetaDetalle">computador</span>
+							<span class="etiquetaDetalle">hola</span>
+							<span class="etiquetaDetalle">escabio</span>
+							<span class="etiquetaDetalle">computador</span>
+							<span class="etiquetaDetalle">hola</span>
+						</div>
+						<div class="botonesEdicion">
+							<button class="aceptar">Ver más</button>
+						</div>
 					</div>
-					<div class="botonesBusqueda">
-						<button class="aceptar">Buscar</button>
-						<button class="cancelar">Limpiar</button>
-					</div>
-				</div> 
-				<div class="seccionCards" >
-					<div class="contenedorCards"style="display: none;"><p>de labore temporibus odit commodi asperiores ullam laborum ut, delectus dolorum! Voluptatibus laudantium doloremque unde quos qui cumque odio explicabo mollitia. Ipsa modi deserunt earum nobis laborum tenetur inventore, excepturi maxime est, ex quam doloribus? Exercitationem expedita iusto rerum illo deserunt alias eius consequuntur totam et dolores, in quia enim voluptas labore id ducimus facilis quisquam accusantium blanditiis fugit nesciunt tempora dolor nobis. Optio exercitationem ab quibusdam laborum totam debitis incidunt voluptatibus voluptas commodi esse, explicabo non ut facere quos libero distinctio quisquam animi illo doloremque. Officiis voluptate at rerum nesciunt recusandae expedita, ad aut, nobis cum architecto odit dignissimos iure soluta eligendi. Nisi, facere. Soluta, repellendus praesentium! Dicta accusantium nihil sequi minus et atque dignissimos fugit ipsum.</p></div>
-					<div class="displayDetalleCard">
-						<div class="detalleCard">
-							<div><i class="fa-regular fa-circle-left"></i> VOLVER<h3><br>Guitarrista profesional</h3></div>
-							<div class="contenedorImagen">
-								<div class="imagen"></div>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, similique vero neque dolores eaque provident ab exercitationem. Laborum sequi dolorum accusantium? Atque, saepe doloremque. Dolor ullam, nam sed minus molestiae veniam accusantium explicabo magni ab reiciendis eligendi et exercitationem temporibus iste, rem corrupti amet culpa! Quas reiciendis ipsa facere!</p>
+		 		</div>
+				<div class="displayDetalleCard">
+					<div class="detalleCard">
+						<div class="tituloTarjeta">
+							<div class="salirDeTarjeta">
+								<i class="fa-regular fa-circle-left"></i> 
+								VOLVER
 							</div>
+							<h3><br>Guitarrista profesional</h3>
+						</div>
+						<div class="contenedorImagen">
+							<div class="imagen"></div>
+							<p class="descripcionTarjeta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, similique vero neque dolores eaque provident ab exercitationem. Laborum sequi dolorum accusantium? Atque, saepe doloremque. Dolor ullam, nam sed minus molestiae veniam accusantium explicabo magni ab reiciendis eligendi et exercitationem temporibus iste, rem corrupti amet culpa! Quas reiciendis ipsa facere!</p>
+						</div>
 						<div class="contenedorEtiquetas">
 							<span class="etiquetaDetalle">escabio</span>
 							<span class="etiquetaDetalle">computador</span>
@@ -109,72 +133,44 @@
 							<button class="cancelar">Eliminar</button>
 						</div>
 					</div>
-						<div class="edicionCard">
-							<label for="tituloPosicion">Posicion</label>
-							<input type="text" name="tituloPosicion" id="tituloPosicion" value="Músico se busca">
-							<label for="descripcionPosicion">Descripcion</label>
-							<textarea id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
-							<label for="etiquetasPosicion">Posicion</label>
-							<input type="text" name="etiquetasPosicion" id="etiquetasPosicion" value="Ubicación">
-							<input type="text" name="etiquetasPosicion" id="etiquetasPosicion1" value="Instrumento">
-							<input type="text" name="etiquetasPosicion" id="etiquetasPosicion2" value="Género Musical">
-							<input type="text" name="etiquetasPosicion" id="etiquetasPosicion3" value="URL foto">
+					<div class="edicionCard">
+						<label for="tituloPosicion">Posicion</label>
+						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Músico se busca">
+						<label for="descripcionPosicion">Descripción</label>
+						<textarea id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
+						<label for="etiquetasPosicion">Posición</label>
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion" value="" placeholder="Ubicación">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion1" value="" placeholder="Instrumento">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion2" value="" placeholder="Género Musical">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion3" value="" placeholder="URL foto">
+						<div class="botonesEdicion">
 							<button class="aceptar">Aceptar cambios</button>
+							<button class="cancelar">Cancelar</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="crear" style="display: none;">
-			<h2>Busca a un nuevo miembro para tu banda</h2>
-			<div class="form">
-				<div class="campo">
-					<label class="label" for="rol"> Puesto a cubrir </label>
-					<div class="entrada">
-					<input
-						id="rol"
-						class="registro"
-						type="text"
-						placeholder="Ingresa un nombre para la busqueda"
-						required/>
+		<section class="seccionPublicacion">
+			<div class="encabezadoBuscar"><h2>Busca un nuevo miembro para tu banda</h2></div>
+			<div class="crear seccionCards" >
+				<div class="displayDetalleCard">
+					<div class="tarjetaPublicacion">
+						<label for="tituloPosicion">Título del aviso</label>
+						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Crea un título para tu publicación">
+						<label for="descripcionPosicion">Descripción</label>
+						<textarea id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
+						<label for="etiquetasPosicion">Posición</label>
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion" value="" placeholder="Lugar de residencia de tu banda">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion1" value="" placeholder="Instrumento que debe dominar">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion2" value="" placeholder="Género musical de tu banda">
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion3" value="" placeholder="URL de una imagen representativa">
+						<div class="botonesEdicion">
+							<button class="aceptar">Publicar</button>
+							<button class="cancelar">Cancelar</button>
+						</div>
 					</div>
 				</div>
-				<div class="campo">
-					<label class="label" for="descripcion"> Descripcion </label>
-					<div class="entrada">
-					<textarea
-						id="descripcion"
-						class="registro"
-						placeholder="Describe en detalle a su músico ideal"
-						required></textarea>
-					</div>
-				</div>
-				<h3>Etiquetas</h3>
-				<div class="entrada">
-					<input
-						id="ubicacion"
-						class="registro"
-						type="text"
-						placeholder="Ingresa cuidad de la banda"
-						required/>
-				</div>
-				<div class="entrada">
-					<input
-						id="posicion"
-						class="registro"
-						type="text"
-						placeholder="Ingresa posición a cubrir"
-						required/>
-				</div>
-				<div class="entrada">
-					<input
-						id="genero"
-						class="registro"
-						type="text"
-						placeholder="Ingrese género musical"
-						required/>
-				</div>
-				<button>Enviar</button>
 			</div>
 		</section>
 		<section class="modalMensaje" style="display: none;">

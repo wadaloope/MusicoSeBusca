@@ -68,16 +68,16 @@ header .contenedorTitulo h1 a:hover {
   color: #9ca3af;
   cursor: pointer;
 }
-header .contenedorTitulo h1 #iconito {
+header .contenedorTitulo h1 #notaMusical {
   -webkit-text-stroke: #4b254d 2.5px;
 }
 @media (min-width: 810px) {
-  header .contenedorTitulo h1 #iconito {
+  header .contenedorTitulo h1 #notaMusical {
     -webkit-text-stroke: #4b254d 4px;
   }
 }
 @media (min-width: 1024px) {
-  header .contenedorTitulo h1 #iconito {
+  header .contenedorTitulo h1 #notaMusical {
     -webkit-text-stroke: #4b254d 5px;
   }
 }
@@ -176,7 +176,7 @@ header nav i {
   width: 1.25rem;
 }
 
-.principal video {
+.home video {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -187,39 +187,35 @@ header nav i {
   object-fit: cover;
 }
 @media (min-width: 1280px) {
-  .principal video {
+  .home video {
     width: 100%;
     height: 100vh;
   }
 }
-.principal .nada {
+.home .areaDeRelleno {
   min-height: calc(100vh - 96.4px);
   margin: 0;
 }
 @media (min-width: 640px) {
-  .principal .nada {
+  .home .areaDeRelleno {
     min-height: calc(100vh - 106px);
     margin-top: 10px;
   }
 }
 @media (min-width: 810px) {
-  .principal .nada {
+  .home .areaDeRelleno {
     min-height: calc(100vh - 128px);
     margin-top: 10px;
   }
 }
 @media (min-width: 1024px) {
-  .principal .nada {
+  .home .areaDeRelleno {
     min-height: calc(100vh - 138px);
     margin-top: 10px;
   }
 }
 
-/* .seccionBusqueda {
-	position: relative;
-	width: 100vw;
-} */
-.buscar .encabezadoBuscar {
+.seccionBuscar .encabezadoBuscar, .seccionPublicacion .encabezadoBuscar {
   background-color: rgba(0, 0, 0, 0.279);
   font-family: "Fauna One", serif;
   font-size: x-small;
@@ -232,79 +228,79 @@ header nav i {
   padding: 7px;
 }
 @media (min-width: 640px) {
-  .buscar .encabezadoBuscar {
+  .seccionBuscar .encabezadoBuscar, .seccionPublicacion .encabezadoBuscar {
     font-size: small;
   }
 }
-.buscar h2 {
+.seccionBuscar h2, .seccionPublicacion h2 {
   display: inline-block;
   margin-right: 20px;
 }
-.buscar .seccionCards {
-  min-height: calc(100vh - 176px);
+.seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  min-height: calc(100vh - 178px);
   margin: 0;
 }
 @media (min-width: 439px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 163px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 541px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 162px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 636px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 163px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 165px);
     margin-top: 10px;
   }
 }
 @media (min-width: 639px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 162px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 640px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 168px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 170px);
     margin-top: 10px;
   }
 }
 @media (min-width: 792px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 168px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 170px);
     margin-top: 10px;
   }
 }
 @media (min-width: 804px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 144px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 146px);
     margin-top: 10px;
   }
 }
 @media (min-width: 810px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 192px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 194px);
     margin-top: 10px;
   }
 }
 @media (min-width: 837px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 166px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 167px);
     margin-top: 10px;
   }
 }
 @media (min-width: 1024px) {
-  .buscar .seccionCards {
-    min-height: calc(100vh - 176px);
+  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+    min-height: calc(100vh - 178px);
     margin-top: 10px;
   }
 }
-.buscar .seccionCards .contenedorCards {
+.seccionBuscar .avisosEncontrados .contenedorCards, .seccionPublicacion .avisosEncontrados .contenedorCards {
   margin: 0;
   border-radius: 0rem;
   border: solid 1px grey;
@@ -312,16 +308,18 @@ header nav i {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 15px;
 }
 @media (min-width: 640px) {
-  .buscar .seccionCards .contenedorCards {
+  .seccionBuscar .avisosEncontrados .contenedorCards, .seccionPublicacion .avisosEncontrados .contenedorCards {
     border-radius: 1.1rem;
     margin: 10px 40px 0;
     padding: 15px 40px;
   }
 }
-.buscar .displayDetalleCard {
+.seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
   background-color: rgba(243, 204, 217, 0.903);
   border-radius: 1.1rem;
   margin: auto;
@@ -334,22 +332,22 @@ header nav i {
   gap: 12px;
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard {
+  .seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
     border-radius: 1.1rem;
     margin: 10px 40px 0;
     padding: 15px 40px;
   }
 }
 @media (min-width: 1024px) {
-  .buscar .displayDetalleCard {
+  .seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
     flex-direction: row;
   }
 }
-.buscar .displayDetalleCard .detalleCard {
+.seccionBuscar .detalleCard, .seccionPublicacion .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
   font-family: "Fauna One", serif;
   font-size: small;
   width: auto;
-  max-width: 100%;
+  max-width: 682px;
   border-radius: 1rem;
   padding: 3vh 3vw;
   display: flex;
@@ -357,7 +355,17 @@ header nav i {
   gap: 5px;
   background-color: #fedbfe;
 }
-.buscar .displayDetalleCard .detalleCard .contenedorImagen .imagen {
+.seccionBuscar .detalleCard .salirDeTarjeta, .seccionPublicacion .detalleCard .salirDeTarjeta, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta, .seccionPublicacion .tarjetaEncontrada .salirDeTarjeta {
+  padding: 6px 2px;
+}
+.seccionBuscar .detalleCard .salirDeTarjeta:hover, .seccionPublicacion .detalleCard .salirDeTarjeta:hover, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta:hover, .seccionPublicacion .tarjetaEncontrada .salirDeTarjeta:hover {
+  width: fit-content;
+  border-radius: 8px;
+  background-color: #4b254d;
+  color: white;
+  cursor: pointer;
+}
+.seccionBuscar .detalleCard .contenedorImagen .imagen, .seccionPublicacion .detalleCard .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen .imagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall .imagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall .imagen {
   width: 100px;
   height: 100px;
   margin-left: 10px;
@@ -365,16 +373,15 @@ header nav i {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GtVh-swPhy4aO4t60sOFnpg0yhGRcCFTqhnmnwKFKQ&s");
   background-size: cover;
 }
-.buscar .displayDetalleCard .detalleCard .contenedorImagen p {
+.seccionBuscar .detalleCard .contenedorImagen p, .seccionPublicacion .detalleCard .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagen p, .seccionPublicacion .tarjetaEncontrada .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall p {
   text-align: justify;
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard .detalleCard .contenedorImagen {
+  .seccionBuscar .detalleCard .contenedorImagen, .seccionPublicacion .detalleCard .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall {
     flex-direction: row;
   }
 }
-.buscar .displayDetalleCard .detalleCard button {
-  width: 50px;
+.seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -382,38 +389,75 @@ header nav i {
   border-radius: 5px;
   border: solid 1px grey;
   background-color: rgba(255, 255, 255, 0.759);
-  padding: 2px 7px;
+  padding: 3px 7px;
   width: 60px;
-  background-color: #be8fc0;
+  background-color: #a079a1;
   color: white;
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard .detalleCard button {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .buscar .displayDetalleCard .detalleCard button {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard .detalleCard button {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
     width: 80px;
   }
 }
-.buscar .displayDetalleCard .detalleCard button:hover {
+.seccionBuscar .detalleCard .aceptar:hover, .seccionPublicacion .detalleCard .aceptar:hover, .seccionBuscar .tarjetaEncontrada .aceptar:hover, .seccionPublicacion .tarjetaEncontrada .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.buscar .displayDetalleCard .detalleCard .contenedorEtiquetas {
+.seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 3px 7px;
+  width: 60px;
+  background-color: #a079a1;
+  color: white;
+  background-color: #e8d5ea;
+  color: rgb(67, 67, 67);
+}
+@media (min-width: 640px) {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+    width: 80px;
+  }
+}
+.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicacion .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicacion .tarjetaEncontrada .cancelar:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicacion .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicacion .tarjetaEncontrada .cancelar:hover {
+  color: white;
+}
+.seccionBuscar .detalleCard .contenedorEtiquetas, .seccionPublicacion .detalleCard .contenedorEtiquetas, .seccionBuscar .tarjetaEncontrada .contenedorEtiquetas, .seccionPublicacion .tarjetaEncontrada .contenedorEtiquetas {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 5px;
 }
-.buscar .displayDetalleCard .detalleCard span {
+.seccionBuscar .detalleCard span, .seccionPublicacion .detalleCard span, .seccionBuscar .tarjetaEncontrada span, .seccionPublicacion .tarjetaEncontrada span {
   padding: 1px 7px;
   background-color: #a7dff7;
   border: solid rgb(198, 177, 177) 1px;
@@ -421,13 +465,14 @@ header nav i {
   font-size: 10px;
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard .detalleCard {
+  .seccionBuscar .detalleCard, .seccionPublicacion .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
     width: 100%;
   }
 }
-.buscar .displayDetalleCard .edicionCard {
+.seccionBuscar .edicionCard, .seccionPublicacion .edicionCard, .seccionPublicacion .tarjetaPublicacion {
   font-family: "Fauna One", serif;
   font-size: small;
+  max-width: 682px;
   width: 100%;
   padding: 3vh 3vw;
   display: flex;
@@ -437,18 +482,24 @@ header nav i {
   border-radius: 1rem;
   background-color: #fedbfe;
 }
-.buscar .displayDetalleCard .edicionCard textarea {
+.seccionBuscar .edicionCard textarea, .seccionPublicacion .edicionCard textarea, .seccionPublicacion .tarjetaPublicacion textarea {
   width: auto;
   border-radius: 7px;
   padding: 8px;
 }
-.buscar .displayDetalleCard .edicionCard input {
+.seccionBuscar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicacion .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicacion .tarjetaPublicacion textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.seccionBuscar .edicionCard input, .seccionPublicacion .edicionCard input, .seccionPublicacion .tarjetaPublicacion input {
   width: auto;
   border-radius: 7px;
   height: 20px;
   padding: 8px;
 }
-.buscar .displayDetalleCard .edicionCard button {
+.seccionBuscar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicacion .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicacion .tarjetaPublicacion input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -456,33 +507,101 @@ header nav i {
   border-radius: 5px;
   border: solid 1px grey;
   background-color: rgba(255, 255, 255, 0.759);
-  padding: 2px 7px;
-  width: 130px;
-  background-color: #be8fc0;
+  padding: 3px 7px;
+  width: 60px;
+  background-color: #a079a1;
   color: white;
+  width: 100px;
 }
 @media (min-width: 640px) {
-  .buscar .displayDetalleCard .edicionCard button {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .buscar .displayDetalleCard .edicionCard button {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
     font-size: 0.8rem;
   }
 }
-.buscar .displayDetalleCard .edicionCard button:hover {
+@media (min-width: 640px) {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+    width: 80px;
+  }
+}
+.seccionBuscar .edicionCard .aceptar:hover, .seccionPublicacion .edicionCard .aceptar:hover, .seccionPublicacion .tarjetaPublicacion .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.buscar .filtros {
+@media (min-width: 640px) {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+    width: 130px;
+  }
+}
+.seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 3px 7px;
+  width: 60px;
+  background-color: #a079a1;
+  color: white;
+  background-color: #e8d5ea;
+  color: rgb(67, 67, 67);
+  width: 100px;
+}
+@media (min-width: 640px) {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+    width: 80px;
+  }
+}
+.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicacion .edicionCard .cancelar:hover, .seccionPublicacion .tarjetaPublicacion .cancelar:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicacion .edicionCard .cancelar:hover, .seccionPublicacion .tarjetaPublicacion .cancelar:hover {
+  color: white;
+}
+@media (min-width: 640px) {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+    width: 130px;
+  }
+}
+.seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
+  height: 390px;
+  max-width: 300px;
+  justify-content: space-between;
+}
+.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall {
+  height: 210px;
+  overflow: hidden;
+}
+.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall p {
+  max-width: 300px;
+  height: 210px;
+  text-overflow: ellipsis;
+}
+.seccionBuscar .filtrosBusqueda, .seccionPublicacion .filtrosBusqueda {
   height: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   justify-content: center;
 }
-.buscar .filtros select {
+.seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -492,16 +611,16 @@ header nav i {
   background-color: rgba(255, 255, 255, 0.759);
 }
 @media (min-width: 640px) {
-  .buscar .filtros select {
+  .seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .buscar .filtros select {
+  .seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
     font-size: 0.8rem;
   }
 }
-.buscar .botonesBusqueda button {
+.seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -509,34 +628,88 @@ header nav i {
   border-radius: 5px;
   border: solid 1px grey;
   background-color: rgba(255, 255, 255, 0.759);
-  padding: 2px 7px;
+  padding: 3px 7px;
   width: 60px;
-  background-color: #be8fc0;
+  background-color: #a079a1;
   color: white;
 }
 @media (min-width: 640px) {
-  .buscar .botonesBusqueda button {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .buscar .botonesBusqueda button {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .buscar .botonesBusqueda button {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
     width: 80px;
   }
 }
-.buscar .botonesBusqueda button:hover {
+.seccionBuscar .botonesBusqueda .aceptar:hover, .seccionPublicacion .botonesBusqueda .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
+.seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 3px 7px;
+  width: 60px;
+  background-color: #a079a1;
+  color: white;
+  background-color: #e8d5ea;
+  color: rgb(67, 67, 67);
+}
+@media (min-width: 640px) {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+    width: 80px;
+  }
+}
+.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicacion .botonesBusqueda .cancelar:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicacion .botonesBusqueda .cancelar:hover {
+  color: white;
+}
+
+.seccionPublicacion {
+  min-height: calc(100vh - 95.6px);
+}
+@media (min-width: 810px) {
+  .seccionPublicacion {
+    min-height: calc(100vh - 117.6px);
+  }
+}
+@media (min-width: 1024px) {
+  .seccionPublicacion {
+    min-height: calc(100vh - 128px);
+  }
+}
+@media (min-width: 1024px) {
+  .seccionPublicacion .tarjetaPublicacion {
+    max-width: 60%;
+  }
+}
 
 .modalMensaje {
-  font-family: "Fauna One", serif;
-  font-size: small;
   position: fixed;
   top: 0;
   left: 0;
@@ -547,6 +720,8 @@ header nav i {
   z-index: 100;
   width: 100%;
   height: 100%;
+  font-family: "Fauna One", serif;
+  font-size: small;
 }
 .modalMensaje .mensajePopup {
   width: 300px;
@@ -567,7 +742,7 @@ header nav i {
   gap: 6px;
   justify-content: space-around;
 }
-.modalMensaje .mensajePopup .botonesPopup button {
+.modalMensaje .mensajePopup .botonesPopup .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -575,29 +750,66 @@ header nav i {
   border-radius: 5px;
   border: solid 1px grey;
   background-color: rgba(255, 255, 255, 0.759);
-  padding: 2px 7px;
+  padding: 3px 7px;
   width: 60px;
-  background-color: #be8fc0;
+  background-color: #a079a1;
   color: white;
 }
 @media (min-width: 640px) {
-  .modalMensaje .mensajePopup .botonesPopup button {
+  .modalMensaje .mensajePopup .botonesPopup .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .modalMensaje .mensajePopup .botonesPopup button {
+  .modalMensaje .mensajePopup .botonesPopup .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .modalMensaje .mensajePopup .botonesPopup button {
+  .modalMensaje .mensajePopup .botonesPopup .aceptar {
     width: 80px;
   }
 }
-.modalMensaje .mensajePopup .botonesPopup button:hover {
+.modalMensaje .mensajePopup .botonesPopup .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
+}
+.modalMensaje .mensajePopup .botonesPopup .cancelar {
+  padding: 2px;
+  font-family: "Fauna One", serif;
+  font-size: 0.6rem;
+  color: #4b254d;
+  border-radius: 5px;
+  border: solid 1px grey;
+  background-color: rgba(255, 255, 255, 0.759);
+  padding: 3px 7px;
+  width: 60px;
+  background-color: #a079a1;
+  color: white;
+  background-color: #e8d5ea;
+  color: rgb(67, 67, 67);
+}
+@media (min-width: 640px) {
+  .modalMensaje .mensajePopup .botonesPopup .cancelar {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 810px) {
+  .modalMensaje .mensajePopup .botonesPopup .cancelar {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) {
+  .modalMensaje .mensajePopup .botonesPopup .cancelar {
+    width: 80px;
+  }
+}
+.modalMensaje .mensajePopup .botonesPopup .cancelar:hover {
+  cursor: pointer;
+  background-color: #4b254d;
+}
+.modalMensaje .mensajePopup .botonesPopup .cancelar:hover {
+  color: white;
 }
 
 .modalSpinner {
