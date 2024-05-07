@@ -15,6 +15,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+body .hidden {
+  display: none;
+}
 
 header {
   background-color: #4b254d;
@@ -81,33 +84,32 @@ header .contenedorTitulo h1 #notaMusical {
     -webkit-text-stroke: #4b254d 5px;
   }
 }
-header .contenedorTitulo div {
+header .contenedorTitulo .iconosMenuMobile {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-header .contenedorTitulo div #botonHamburguesa {
+header .contenedorTitulo .iconosMenuMobile #botonHamburguesa {
   font-size: 1.875rem;
   cursor: pointer;
 }
 @media (min-width: 810px) {
-  header .contenedorTitulo div #botonHamburguesa {
+  header .contenedorTitulo .iconosMenuMobile #botonHamburguesa {
     display: none;
   }
-  header .contenedorTitulo div #botonHamburguesa:hover {
+  header .contenedorTitulo .iconosMenuMobile #botonHamburguesa:hover {
     color: #9ca3af;
   }
 }
-header .contenedorTitulo div #botonCruz {
+header .contenedorTitulo .iconosMenuMobile #botonCruz {
   font-size: 1.875rem;
   cursor: pointer;
-  display: none;
 }
 @media (min-width: 810px) {
-  header .contenedorTitulo div #botonCruz {
+  header .contenedorTitulo .iconosMenuMobile #botonCruz {
     display: none;
   }
-  header .contenedorTitulo div #botonCruz:hover {
+  header .contenedorTitulo .iconosMenuMobile #botonCruz:hover {
     color: #9ca3af;
   }
 }
@@ -115,25 +117,23 @@ header #lineaSeparacion {
   height: 2px;
   width: 100%;
   background-color: #fddbf8;
-  display: none;
 }
 @media (min-width: 810px) {
   header #lineaSeparacion {
     display: none;
   }
 }
-header nav {
+header #linksNavegacion {
   width: 100%;
-  display: none;
   background-color: transparent;
 }
 @media (min-width: 810px) {
-  header nav {
+  header #linksNavegacion {
     display: inline-block;
     width: fit-content;
   }
 }
-header nav #seleccionSecciones {
+header #linksNavegacion #seleccionSecciones {
   font-family: "Fauna One", serif;
   font-weight: 400;
   font-style: normal;
@@ -144,35 +144,35 @@ header nav #seleccionSecciones {
   gap: 0.5rem;
 }
 @media (min-width: 810px) {
-  header nav #seleccionSecciones {
+  header #linksNavegacion #seleccionSecciones {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 4vw;
   }
 }
-header nav ul {
+header #linksNavegacion ul {
   list-style-type: none;
   color: #fddbf8;
-  font-size: 23px;
+  font-size: 15px;
 }
 @media (min-width: 810px) {
-  header nav ul {
+  header #linksNavegacion ul {
     font-size: 17px;
   }
 }
-header nav ul a {
+header #linksNavegacion ul a {
   color: #fddbf8;
   text-decoration: none;
   display: flex;
   gap: 0.3rem;
   align-items: center;
 }
-header nav ul a:hover {
+header #linksNavegacion ul a:hover {
   color: #9ca3af;
   cursor: pointer;
 }
-header nav i {
+header #linksNavegacion i {
   width: 1.25rem;
 }
 
@@ -193,7 +193,7 @@ header nav i {
   }
 }
 .home .areaDeRelleno {
-  min-height: calc(100vh - 96.4px);
+  min-height: calc(100vh - 96.11px);
   margin: 0;
 }
 @media (min-width: 640px) {
@@ -214,8 +214,11 @@ header nav i {
     margin-top: 10px;
   }
 }
+.home .correccionHeight {
+  height: calc(100vh - 175.73px);
+}
 
-.seccionBuscar .encabezadoBuscar, .seccionPublicacion .encabezadoBuscar {
+.seccionBuscar .encabezadoBuscar, .seccionPublicar .encabezadoBuscar {
   background-color: rgba(0, 0, 0, 0.279);
   font-family: "Fauna One", serif;
   font-size: x-small;
@@ -228,98 +231,103 @@ header nav i {
   padding: 7px;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .encabezadoBuscar, .seccionPublicacion .encabezadoBuscar {
+  .seccionBuscar .encabezadoBuscar, .seccionPublicar .encabezadoBuscar {
     font-size: small;
   }
 }
-.seccionBuscar h2, .seccionPublicacion h2 {
+.seccionBuscar h2, .seccionPublicar h2 {
   display: inline-block;
   margin-right: 20px;
 }
-.seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+.seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
   min-height: calc(100vh - 178px);
   margin: 0;
 }
 @media (min-width: 439px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 541px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 636px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 165px);
     margin-top: 10px;
   }
 }
 @media (min-width: 639px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 164px);
     margin-top: 10px;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 170px);
     margin-top: 10px;
   }
 }
 @media (min-width: 792px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 170px);
     margin-top: 10px;
   }
 }
 @media (min-width: 804px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 146px);
     margin-top: 10px;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 194px);
     margin-top: 10px;
   }
 }
 @media (min-width: 837px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 167px);
     margin-top: 10px;
   }
 }
 @media (min-width: 1024px) {
-  .seccionBuscar .avisosEncontrados, .seccionPublicacion .avisosEncontrados {
+  .seccionBuscar .avisosEncontrados, .seccionPublicar .avisosEncontrados {
     min-height: calc(100vh - 178px);
     margin-top: 10px;
   }
 }
-.seccionBuscar .avisosEncontrados .contenedorCards, .seccionPublicacion .avisosEncontrados .contenedorCards {
+.seccionBuscar .avisosEncontrados .hidden1, .seccionPublicar .avisosEncontrados .hidden1 {
+  display: none;
+}
+.seccionBuscar .contenedorCards, .seccionPublicar .contenedorCards {
   margin: 0;
   border-radius: 0rem;
   border: solid 1px grey;
   background-color: rgba(255, 255, 255, 0.759);
   padding: 10px 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .avisosEncontrados .contenedorCards, .seccionPublicacion .avisosEncontrados .contenedorCards {
+  .seccionBuscar .contenedorCards, .seccionPublicar .contenedorCards {
     border-radius: 1.1rem;
     margin: 10px 40px 0;
     padding: 15px 40px;
+    align-items: flex-start;
   }
 }
-.seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
+.seccionBuscar .displayDetalleCard, .seccionPublicar .displayDetalleCard {
   background-color: rgba(243, 204, 217, 0.903);
   border-radius: 1.1rem;
   margin: auto;
@@ -331,19 +339,22 @@ header nav i {
   padding: 10px;
   gap: 12px;
 }
+.seccionBuscar .displayDetalleCard .hidden2, .seccionPublicar .displayDetalleCard .hidden2 {
+  display: none;
+}
 @media (min-width: 640px) {
-  .seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
+  .seccionBuscar .displayDetalleCard, .seccionPublicar .displayDetalleCard {
     border-radius: 1.1rem;
     margin: 10px 40px 0;
     padding: 15px 40px;
   }
 }
 @media (min-width: 1024px) {
-  .seccionBuscar .displayDetalleCard, .seccionPublicacion .displayDetalleCard {
+  .seccionBuscar .displayDetalleCard, .seccionPublicar .displayDetalleCard {
     flex-direction: row;
   }
 }
-.seccionBuscar .detalleCard, .seccionPublicacion .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
+.seccionBuscar .detalleCard, .seccionPublicar .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicar .tarjetaEncontrada {
   font-family: "Fauna One", serif;
   font-size: small;
   width: auto;
@@ -355,17 +366,17 @@ header nav i {
   gap: 5px;
   background-color: #fedbfe;
 }
-.seccionBuscar .detalleCard .salirDeTarjeta, .seccionPublicacion .detalleCard .salirDeTarjeta, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta, .seccionPublicacion .tarjetaEncontrada .salirDeTarjeta {
+.seccionBuscar .detalleCard .salirDeTarjeta, .seccionPublicar .detalleCard .salirDeTarjeta, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta, .seccionPublicar .tarjetaEncontrada .salirDeTarjeta {
   padding: 6px 2px;
 }
-.seccionBuscar .detalleCard .salirDeTarjeta:hover, .seccionPublicacion .detalleCard .salirDeTarjeta:hover, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta:hover, .seccionPublicacion .tarjetaEncontrada .salirDeTarjeta:hover {
+.seccionBuscar .detalleCard .salirDeTarjeta:hover, .seccionPublicar .detalleCard .salirDeTarjeta:hover, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta:hover, .seccionPublicar .tarjetaEncontrada .salirDeTarjeta:hover {
   width: fit-content;
   border-radius: 8px;
   background-color: #4b254d;
   color: white;
   cursor: pointer;
 }
-.seccionBuscar .detalleCard .contenedorImagen .imagen, .seccionPublicacion .detalleCard .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen .imagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall .imagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall .imagen {
+.seccionBuscar .detalleCard .contenedorImagen .imagen, .seccionPublicar .detalleCard .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen .imagen, .seccionPublicar .tarjetaEncontrada .contenedorImagen .imagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall .imagen, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall .imagen {
   width: 100px;
   height: 100px;
   margin-left: 10px;
@@ -373,15 +384,15 @@ header nav i {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0GtVh-swPhy4aO4t60sOFnpg0yhGRcCFTqhnmnwKFKQ&s");
   background-size: cover;
 }
-.seccionBuscar .detalleCard .contenedorImagen p, .seccionPublicacion .detalleCard .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagen p, .seccionPublicacion .tarjetaEncontrada .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall p {
+.seccionBuscar .detalleCard .contenedorImagen p, .seccionPublicar .detalleCard .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagen p, .seccionPublicar .tarjetaEncontrada .contenedorImagen p, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall p {
   text-align: justify;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard .contenedorImagen, .seccionPublicacion .detalleCard .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen, .seccionPublicacion .tarjetaEncontrada .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall {
+  .seccionBuscar .detalleCard .contenedorImagen, .seccionPublicar .detalleCard .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagen, .seccionPublicar .tarjetaEncontrada .contenedorImagen, .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall {
     flex-direction: row;
   }
 }
-.seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
+.seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -395,25 +406,25 @@ header nav i {
   color: white;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard .aceptar, .seccionPublicacion .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicacion .tarjetaEncontrada .aceptar {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
     width: 80px;
   }
 }
-.seccionBuscar .detalleCard .aceptar:hover, .seccionPublicacion .detalleCard .aceptar:hover, .seccionBuscar .tarjetaEncontrada .aceptar:hover, .seccionPublicacion .tarjetaEncontrada .aceptar:hover {
+.seccionBuscar .detalleCard .aceptar:hover, .seccionPublicar .detalleCard .aceptar:hover, .seccionBuscar .tarjetaEncontrada .aceptar:hover, .seccionPublicar .tarjetaEncontrada .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+.seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -429,35 +440,35 @@ header nav i {
   color: rgb(67, 67, 67);
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard .cancelar, .seccionPublicacion .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicacion .tarjetaEncontrada .cancelar {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
     width: 80px;
   }
 }
-.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicacion .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicacion .tarjetaEncontrada .cancelar:hover {
+.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicar .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicar .tarjetaEncontrada .cancelar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicacion .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicacion .tarjetaEncontrada .cancelar:hover {
+.seccionBuscar .detalleCard .cancelar:hover, .seccionPublicar .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicar .tarjetaEncontrada .cancelar:hover {
   color: white;
 }
-.seccionBuscar .detalleCard .contenedorEtiquetas, .seccionPublicacion .detalleCard .contenedorEtiquetas, .seccionBuscar .tarjetaEncontrada .contenedorEtiquetas, .seccionPublicacion .tarjetaEncontrada .contenedorEtiquetas {
+.seccionBuscar .detalleCard .contenedorEtiquetas, .seccionPublicar .detalleCard .contenedorEtiquetas, .seccionBuscar .tarjetaEncontrada .contenedorEtiquetas, .seccionPublicar .tarjetaEncontrada .contenedorEtiquetas {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 5px;
 }
-.seccionBuscar .detalleCard span, .seccionPublicacion .detalleCard span, .seccionBuscar .tarjetaEncontrada span, .seccionPublicacion .tarjetaEncontrada span {
+.seccionBuscar .detalleCard span, .seccionPublicar .detalleCard span, .seccionBuscar .tarjetaEncontrada span, .seccionPublicar .tarjetaEncontrada span {
   padding: 1px 7px;
   background-color: #a7dff7;
   border: solid rgb(198, 177, 177) 1px;
@@ -465,11 +476,11 @@ header nav i {
   font-size: 10px;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .detalleCard, .seccionPublicacion .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
+  .seccionBuscar .detalleCard, .seccionPublicar .detalleCard, .seccionBuscar .tarjetaEncontrada, .seccionPublicar .tarjetaEncontrada {
     width: 100%;
   }
 }
-.seccionBuscar .edicionCard, .seccionPublicacion .edicionCard, .seccionPublicacion .tarjetaPublicacion {
+.seccionBuscar .edicionCard, .seccionPublicar .edicionCard, .seccionPublicar .tarjetaPublicacion {
   font-family: "Fauna One", serif;
   font-size: small;
   max-width: 682px;
@@ -482,24 +493,24 @@ header nav i {
   border-radius: 1rem;
   background-color: #fedbfe;
 }
-.seccionBuscar .edicionCard textarea, .seccionPublicacion .edicionCard textarea, .seccionPublicacion .tarjetaPublicacion textarea {
+.seccionBuscar .edicionCard textarea, .seccionPublicar .edicionCard textarea, .seccionPublicar .tarjetaPublicacion textarea {
   width: auto;
   border-radius: 7px;
   padding: 8px;
 }
-.seccionBuscar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicacion .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicacion .tarjetaPublicacion textarea:focus::-webkit-input-placeholder {
+.seccionBuscar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicar .tarjetaPublicacion textarea:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-.seccionBuscar .edicionCard input, .seccionPublicacion .edicionCard input, .seccionPublicacion .tarjetaPublicacion input {
+.seccionBuscar .edicionCard input, .seccionPublicar .edicionCard input, .seccionPublicar .tarjetaPublicacion input {
   width: auto;
   border-radius: 7px;
   height: 20px;
   padding: 8px;
 }
-.seccionBuscar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicacion .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicacion .tarjetaPublicacion input:focus::-webkit-input-placeholder {
+.seccionBuscar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicar .tarjetaPublicacion input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-.seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+.seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -514,30 +525,30 @@ header nav i {
   width: 100px;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
     width: 80px;
   }
 }
-.seccionBuscar .edicionCard .aceptar:hover, .seccionPublicacion .edicionCard .aceptar:hover, .seccionPublicacion .tarjetaPublicacion .aceptar:hover {
+.seccionBuscar .edicionCard .aceptar:hover, .seccionPublicar .edicionCard .aceptar:hover, .seccionPublicar .tarjetaPublicacion .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .aceptar, .seccionPublicacion .edicionCard .aceptar, .seccionPublicacion .tarjetaPublicacion .aceptar {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
     width: 130px;
   }
 }
-.seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+.seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -554,54 +565,54 @@ header nav i {
   width: 100px;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
     width: 80px;
   }
 }
-.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicacion .edicionCard .cancelar:hover, .seccionPublicacion .tarjetaPublicacion .cancelar:hover {
+.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicar .edicionCard .cancelar:hover, .seccionPublicar .tarjetaPublicacion .cancelar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicacion .edicionCard .cancelar:hover, .seccionPublicacion .tarjetaPublicacion .cancelar:hover {
+.seccionBuscar .edicionCard .cancelar:hover, .seccionPublicar .edicionCard .cancelar:hover, .seccionPublicar .tarjetaPublicacion .cancelar:hover {
   color: white;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .edicionCard .cancelar, .seccionPublicacion .edicionCard .cancelar, .seccionPublicacion .tarjetaPublicacion .cancelar {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
     width: 130px;
   }
 }
-.seccionBuscar .tarjetaEncontrada, .seccionPublicacion .tarjetaEncontrada {
+.seccionBuscar .tarjetaEncontrada, .seccionPublicar .tarjetaEncontrada {
   height: 390px;
   max-width: 300px;
   justify-content: space-between;
 }
-.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall {
+.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall {
   height: 210px;
   overflow: hidden;
 }
-.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicacion .tarjetaEncontrada .contenedorImagenSmall p {
+.seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall p {
   max-width: 300px;
   height: 210px;
   text-overflow: ellipsis;
 }
-.seccionBuscar .filtrosBusqueda, .seccionPublicacion .filtrosBusqueda {
+.seccionBuscar .filtrosBusqueda, .seccionPublicar .filtrosBusqueda {
   height: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   justify-content: center;
 }
-.seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
+.seccionBuscar .filtrosBusqueda select, .seccionPublicar .filtrosBusqueda select {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -611,16 +622,16 @@ header nav i {
   background-color: rgba(255, 255, 255, 0.759);
 }
 @media (min-width: 640px) {
-  .seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
+  .seccionBuscar .filtrosBusqueda select, .seccionPublicar .filtrosBusqueda select {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .filtrosBusqueda select, .seccionPublicacion .filtrosBusqueda select {
+  .seccionBuscar .filtrosBusqueda select, .seccionPublicar .filtrosBusqueda select {
     font-size: 0.8rem;
   }
 }
-.seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
+.seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -634,25 +645,25 @@ header nav i {
   color: white;
 }
 @media (min-width: 640px) {
-  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicacion .botonesBusqueda .aceptar {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
     width: 80px;
   }
 }
-.seccionBuscar .botonesBusqueda .aceptar:hover, .seccionPublicacion .botonesBusqueda .aceptar:hover {
+.seccionBuscar .botonesBusqueda .aceptar:hover, .seccionPublicar .botonesBusqueda .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+.seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
   padding: 2px;
   font-family: "Fauna One", serif;
   font-size: 0.6rem;
@@ -668,43 +679,67 @@ header nav i {
   color: rgb(67, 67, 67);
 }
 @media (min-width: 640px) {
-  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
     font-size: 0.7rem;
   }
 }
 @media (min-width: 810px) {
-  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
     font-size: 0.8rem;
   }
 }
 @media (min-width: 640px) {
-  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicacion .botonesBusqueda .cancelar {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
     width: 80px;
   }
 }
-.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicacion .botonesBusqueda .cancelar:hover {
+.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicar .botonesBusqueda .cancelar:hover {
   cursor: pointer;
   background-color: #4b254d;
 }
-.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicacion .botonesBusqueda .cancelar:hover {
+.seccionBuscar .botonesBusqueda .cancelar:hover, .seccionPublicar .botonesBusqueda .cancelar:hover {
   color: white;
 }
 
-.seccionPublicacion {
+.seccionPublicar {
   min-height: calc(100vh - 95.6px);
 }
 @media (min-width: 810px) {
-  .seccionPublicacion {
+  .seccionPublicar {
     min-height: calc(100vh - 117.6px);
   }
 }
 @media (min-width: 1024px) {
-  .seccionPublicacion {
+  .seccionPublicar {
     min-height: calc(100vh - 128px);
   }
 }
+.seccionPublicar .displayDetalleCardPublic {
+  background-color: rgba(243, 204, 217, 0.903);
+  border-radius: 1.1rem;
+  margin: auto;
+  border-radius: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10px;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .seccionPublicar .displayDetalleCardPublic {
+    border-radius: 1.1rem;
+    margin: 10px 40px 0;
+    padding: 15px 40px;
+  }
+}
 @media (min-width: 1024px) {
-  .seccionPublicacion .tarjetaPublicacion {
+  .seccionPublicar .displayDetalleCardPublic {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionPublicar .tarjetaPublicacion {
     max-width: 60%;
   }
 }

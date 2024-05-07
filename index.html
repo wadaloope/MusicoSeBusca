@@ -14,21 +14,21 @@
 <body>
 	<header>
 		<div class="contenedorTitulo">
-			<h1><a href="#">
+			<h1><a id="homeSweetHome">
 				<i id="notaMusical" class="fa-solid fa-music"></i>
 				MÚSICO SE BUSCA</a>
 			<h1>
 			<div class="iconosMenuMobile">
 				<i id="botonHamburguesa" class="fa-solid fa-bars"></i>
-				<i id="botonCruz" class="fa-solid fa-square-xmark"></i>
+				<i id="botonCruz" class="fa-solid fa-square-xmark hidden"></i>
 			</div>
 		</div>
-		<div id="lineaSeparacion"></div>
-		<nav id="linksNavegacion">
+		<div id="lineaSeparacion" class="hidden"></div>
+		<nav id="linksNavegacion" class="hidden">
 			<ul id="seleccionSecciones">
 				<li><a id="botonSeccionBuscar" title="Presiona aqui para buscar banda">
 					<i class="fa-solid fa-magnifying-glass"></i>
-					SOY MÚSICO
+					BUSCO BANDA
 				</a></li>
 				<li><a id="botonSeleccionPublicar" title="Presiona aqui para crear aviso">
 					<i class="fa-regular fa-square-plus"></i>
@@ -38,14 +38,14 @@
 		</nav>
 	</header>
 	<main>
-		<section class="home" style="display: none;">	
+		<section class="home">	
 			<video autoplay muted loop style="filter: saturate(2) hue-rotate(28deg) blur(1.5px);">
 				<source src="resources/video.mp4" type="video/mp4">
 				Tu navegador no soporta etiquetas de video.
 			</video>
 			<div class="areaDeRelleno"></div>
 		</section>
-		<section class="seccionBuscar" style="display: none;">
+		<section class="seccionBuscar hidden">
 			<div class="encabezadoBuscar">
 				<h2>Encuentra tu nueva banda</h2>
 				<div class="filtrosBusqueda">
@@ -82,12 +82,12 @@
 					</select>
 				</div>
 				<div class="botonesBusqueda">
-					<button class="aceptar">Buscar</button>
-					<button class="cancelar">Limpiar</button>
+					<button class="aceptar" id="iniciarBusqueda">Buscar</button>
+					<button class="cancelar" id="limpiarFiltros">Limpiar</button>
 				</div>
 			</div> 
 			<div class="avisosEncontrados">
-				<div class="contenedorCards"style="display: none;">
+				<div class="contenedorCards hidden1">
 					<div class="tarjetaEncontrada">
 						<h3 class="tituloTarjeta">Guitarrista profesional</h3>
 						<div class="contenedorImagenSmall">
@@ -103,11 +103,11 @@
 							<span class="etiquetaDetalle">hola</span>
 						</div>
 						<div class="botonesEdicion">
-							<button class="aceptar">Ver más</button>
+							<button class="aceptar" id="masInformacion">Ver más</button>
 						</div>
 					</div>
 		 		</div>
-				<div class="displayDetalleCard">
+				<div class="displayDetalleCard hidden1">
 					<div class="detalleCard">
 						<div class="tituloTarjeta">
 							<div class="salirDeTarjeta">
@@ -129,11 +129,11 @@
 							<span class="etiquetaDetalle">hola</span>
 						</div>
 						<div class="botonesEdicion">
-							<button class="aceptar">Editar</button>
-							<button class="cancelar">Eliminar</button>
+							<button class="aceptar" id="iniciarEdicion">Editar</button>
+							<button class="cancelar" id="eliminarPublicacion" >Eliminar</button>
 						</div>
 					</div>
-					<div class="edicionCard">
+					<div class="edicionCard hidden2">
 						<label for="tituloPosicion">Posicion</label>
 						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Músico se busca">
 						<label for="descripcionPosicion">Descripción</label>
@@ -151,10 +151,10 @@
 				</div>
 			</div>
 		</section>
-		<section class="seccionPublicacion">
+		<section class="seccionPublicar hidden">
 			<div class="encabezadoBuscar"><h2>Busca un nuevo miembro para tu banda</h2></div>
-			<div class="crear seccionCards" >
-				<div class="displayDetalleCard">
+			<div class="crear">
+				<div class="displayDetalleCardPublic">
 					<div class="tarjetaPublicacion">
 						<label for="tituloPosicion">Título del aviso</label>
 						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Crea un título para tu publicación">
@@ -173,7 +173,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="modalMensaje" style="display: none;">
+		<section class="modalMensaje hidden">
 			<div class="mensajePopup">
 				<p id="leyendaPopup">Bienvenidos amigos</p>
 				<div class="botonesPopup">
@@ -182,7 +182,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="modalSpinner" style="display: none;">
+		<section class="modalSpinner hidden">
 			<div class="fondoSpinner">
 				<img src="./resources/spinner.gif" alt="" title="Aguarda unos segundos">
 			</div>
@@ -194,4 +194,5 @@
 		</footer>
 	</main>
 </body>
+<script src="seleccionPaneles.js"></script>
 </html>

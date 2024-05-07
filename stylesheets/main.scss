@@ -174,6 +174,9 @@ body {
 	background-position: right 0px bottom;
 	display: flex;
 	flex-direction: column;
+	.hidden {
+		display: none;
+	}
 }
 
 header {
@@ -216,7 +219,7 @@ header {
 			}
 		}
 
-		div {
+		.iconosMenuMobile {
 			display: flex;
 			align-items: center;
 			gap: 1.5rem;
@@ -225,7 +228,6 @@ header {
 			}
 			#botonCruz {
 				@include botonMobileMenu;
-				display: none;
 			}
 		}
 	}
@@ -233,15 +235,14 @@ header {
 		height: 2px;
 		width: 100%;
 		background-color: $bannerFontColor;
-		display: none;
 		@media (min-width: $mediumScreen) {
 			display: none;
 		}
 	}
-	nav {
+	#linksNavegacion {
 		width: 100%;
-		display: none;
 		background-color: transparent;
+
 		@media (min-width: $mediumScreen) {
 			display: inline-block;
 			width: fit-content;
@@ -261,7 +262,7 @@ header {
 		ul {
 			list-style-type: none;
 			color: $bannerFontColor;
-			font-size: $smallFont;
+			font-size: $xsmallFont;
 
 			@media (min-width: $mediumScreen) {
 				font-size: 17px;
@@ -293,7 +294,7 @@ header {
 		}
 	}
 	.areaDeRelleno {
-		min-height: calc((100vh) - (96.4px));
+		min-height: calc((100vh) - (96.11px));
 		margin: 0;
 
 		@media (min-width: $smallScreen) {
@@ -308,6 +309,9 @@ header {
 			min-height: calc((100vh) - (138px));
 			margin-top: 10px;
 		}
+	}
+	.correccionHeight {
+		height: calc((100vh) - (175.73px));
 	}
 }
 
@@ -336,22 +340,27 @@ header {
 		min-height: calc((100vh) - (178px));
 		margin: 0;
 		@include minwidthAvisos;
-		.contenedorCards {
-			margin: 0;
-			border-radius: 0rem;
-			border: solid 1px grey;
-			background-color: rgba(255, 255, 255, 0.759);
-			padding: 10px 20px;
-			display: flex;
-			justify-content: space-between;
+		.hidden1 {
+			display: none;
+		}
+	}
+	.contenedorCards {
+		margin: 0;
+		border-radius: 0rem;
+		border: solid 1px grey;
+		background-color: rgba(255, 255, 255, 0.759);
+		padding: 10px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 15px;
+		@media (min-width: $smallScreen) {
+			border-radius: 1.1rem;
+			margin: 10px 40px 0;
+			padding: 15px 40px;
 			align-items: flex-start;
-			flex-wrap: wrap;
-			gap: 15px;
-			@media (min-width: $smallScreen) {
-				border-radius: 1.1rem;
-				margin: 10px 40px 0;
-				padding: 15px 40px;
-			}
 		}
 	}
 	.displayDetalleCard {
@@ -365,6 +374,9 @@ header {
 		align-items: start;
 		padding: 10px;
 		gap: 12px;
+		.hidden2 {
+			display: none;
+		}
 		@media (min-width: $smallScreen) {
 			border-radius: 1.1rem;
 			margin: 10px 40px 0;
@@ -514,7 +526,7 @@ header {
 	}
 }
 
-.seccionPublicacion {
+.seccionPublicar {
 	@extend .seccionBuscar;
 	min-height: calc(100vh - (95.6px));
 	@media (min-width: $mediumScreen) {
@@ -522,6 +534,26 @@ header {
 	}
 	@media (min-width: $largeScreen) {
 		min-height: calc(100vh - (128px));
+	}
+	.displayDetalleCardPublic {
+		background-color: rgba(243, 204, 217, 0.903);
+		border-radius: 1.1rem;
+		margin: auto;
+		border-radius: 0rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		padding: 10px;
+		gap: 12px;
+		@media (min-width: $smallScreen) {
+			border-radius: 1.1rem;
+			margin: 10px 40px 0;
+			padding: 15px 40px;
+		}
+		@media (min-width: $largeScreen) {
+			flex-direction: row;
+		}
 	}
 	.tarjetaPublicacion {
 		@extend .edicionCard;
