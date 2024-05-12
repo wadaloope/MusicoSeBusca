@@ -1,0 +1,149 @@
+@mixin distribucionFilas {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin fuenteTitulo {
+	font-family: "Fredericka the Great", serif;
+	font-weight: 400;
+	font-style: normal;
+	color: $bannerFontColor;
+	font-size: $smallFont;
+}
+
+@mixin fuenteSubtitulo {
+	font-family: $fuentePrincipal;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin enlacesEncabezado {
+	color: $bannerFontColor;
+	text-decoration: none;
+	&:hover {
+		color: $bannerFontHoverColor;
+		cursor: pointer;
+	}
+	display: flex;
+	gap: 0.3rem;
+	align-items: center;
+}
+
+@mixin botonMobileMenu {
+	font-size: 1.875rem;
+	cursor: pointer;
+	@media (min-width: $mediumScreen) {
+		display: none;
+		&:hover {
+			color: $bannerFontHoverColor;
+		}
+	}
+}
+
+@mixin estiloSelect {
+	padding: 2px;
+	font-family: $fuentePrincipal;
+	font-size: 0.6rem;
+	color: $bannerColor;
+	border-radius: 5px;
+	border: solid 1px grey;
+	background-color: rgba(255, 255, 255, 0.759);
+	@media (min-width: $smallScreen) {
+		font-size: 0.7rem;
+	}
+	@media (min-width: $mediumScreen) {
+		font-size: 0.8rem;
+	}
+	@media (min-width: $largeScreen) {
+		font-size: 0.9rem;
+	}
+}
+
+@mixin estiloAceptar {
+	@include estiloSelect;
+	padding: 3px 7px;
+	width: 60px;
+	background-color: #a079a1;
+	color: white;
+	@media (min-width: $smallScreen) {
+		width: 80px;
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: $bannerColor;
+	}
+}
+
+@mixin estiloCancelar {
+	@include estiloAceptar;
+	background-color: #e8d5ea;
+	color: rgb(67, 67, 67);
+	&:hover {
+		color: white;
+	}
+}
+
+@mixin minwidthAvisos {
+	@media (min-width: 439px) {
+		min-height: calc((100vh) - (164px));
+		margin-top: 10px;
+	}
+	@media (min-width: 541px) {
+		min-height: calc((100vh) - (164px));
+		margin-top: 10px;
+	}
+	@media (min-width: 636px) {
+		min-height: calc((100vh) - (165px));
+		margin-top: 10px;
+	}
+	@media (min-width: 639px) {
+		min-height: calc((100vh) - (164px));
+		margin-top: 10px;
+	}
+	@media (min-width: 640px) {
+		min-height: calc((100vh) - (170px));
+		margin-top: 10px;
+	}
+	@media (min-width: 792px) {
+		min-height: calc((100vh) - (170px));
+		margin-top: 10px;
+	}
+	@media (min-width: 804px) {
+		min-height: calc((100vh) - (146px));
+		margin-top: 10px;
+	}
+	@media (min-width: 810px) {
+		min-height: calc((100vh) - (194px));
+		margin-top: 10px;
+	}
+	@media (min-width: 837px) {
+		min-height: calc((100vh) - (167px));
+		margin-top: 10px;
+	}
+	@media (min-width: 1024px) {
+		min-height: calc((100vh) - (178px));
+		margin-top: 10px;
+	}
+}
+
+@mixin spanes {
+	padding: 1px 7px;
+	background-color: #a7dff7;
+	border: solid rgb(198, 177, 177) 1px;
+	border-radius: 5px;
+	font-size: $xxsmallFont;
+}
+
+@mixin estiloModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(243, 204, 217, 0.903);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}

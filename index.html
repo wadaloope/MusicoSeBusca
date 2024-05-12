@@ -8,7 +8,7 @@
         src="https://kit.fontawesome.com/feae6c3d99.js"
         crossorigin="anonymous"
     ></script>
-	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="./style.css">
 	<title>Musico se Busca</title>
 </head>
 <body>
@@ -28,11 +28,11 @@
 			<ul id="seleccionSecciones">
 				<li><a id="botonSeccionBuscar" title="Presiona aqui para buscar banda">
 					<i class="fa-solid fa-magnifying-glass"></i>
-					BUSCO BANDA
+					<p>BUSCO BANDA</p>
 				</a></li>
 				<li><a id="botonSeleccionPublicar" title="Presiona aqui para crear aviso">
 					<i class="fa-regular fa-square-plus"></i>
-					BUSCO MÚSICO
+					<p>BUSCO MÚSICO</p>
 				</a></li>
 			</ul>
 		</nav>
@@ -89,7 +89,8 @@
 			<div class="avisosEncontrados">
 				<div class="contenedorCards hidden1">
 					<div class="tarjetaEncontrada">
-						<h3 class="tituloTarjeta">Guitarrista profesional</h3>
+						<div><p>SE BUSCA</p>
+						<h3 class="tituloTarjeta">Guitarrista profesional</h3></div>
 						<div class="contenedorImagenSmall">
 							<div class="imagen"></div>
 							<p class="descripcionTarjeta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, similique vero neque dolores eaque provident ab exercitationem. Laborum sequi dolorum accusantium? Atque, saepe doloremque. Dolor ullam, nam sed minus molestiae veniam accusantium explicabo magni ab reiciendis eligendi et exercitationem temporibus iste, rem corrupti amet culpa! Quas reiciendis ipsa facere!</p>
@@ -114,7 +115,8 @@
 								<i class="fa-regular fa-circle-left"></i> 
 								VOLVER
 							</div>
-							<h3><br>Guitarrista profesional</h3>
+							<p>SE BUSCA</p>
+							<h3>Guitarrista profesional</h3>
 						</div>
 						<div class="contenedorImagen">
 							<div class="imagen"></div>
@@ -134,15 +136,15 @@
 						</div>
 					</div>
 					<div class="edicionCard hidden2">
-						<label for="tituloPosicion">Posicion</label>
+						<label for="tituloPosicion" id="tituloEncontrado">Descripción</label>
 						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Músico se busca">
 						<label for="descripcionPosicion">Descripción</label>
-						<textarea id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
+						<textarea class="descripcionPosicion" id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
 						<label for="etiquetasPosicion">Posición</label>
 						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion" value="" placeholder="Ubicación">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion1" value="" placeholder="Instrumento">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion2" value="" placeholder="Género Musical">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion3" value="" placeholder="URL foto">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="Instrumento">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="Género Musical">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="URL foto">
 						<div class="botonesEdicion">
 							<button class="aceptar">Aceptar cambios</button>
 							<button class="cancelar">Cancelar</button>
@@ -156,15 +158,15 @@
 			<div class="crear">
 				<div class="displayDetalleCardPublic">
 					<div class="tarjetaPublicacion">
-						<label for="tituloPosicion">Título del aviso</label>
-						<input type="text" name="tituloPosicion" id="tituloPosicion" value="" placeholder="Crea un título para tu publicación">
-						<label for="descripcionPosicion">Descripción</label>
-						<textarea id="descripcionPosicion" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
-						<label for="etiquetasPosicion">Posición</label>
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion" value="" placeholder="Lugar de residencia de tu banda">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion1" value="" placeholder="Instrumento que debe dominar">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion2" value="" placeholder="Género musical de tu banda">
-						<input type="text" name="etiquetasPosicion" id="etiquetasPosicion3" value="" placeholder="URL de una imagen representativa">
+						<label for="tituloPosicionPublic" id="tituloAviso">Título del aviso</label>
+						<input type="text" name="tituloPosicionPublic" id="tituloPosicionPublic" value="" placeholder="Crea un título para tu publicación">
+						<label for="descripcionPosicion1">Descripción</label>
+						<textarea class="descripcionPosicion" id="descripcionPosicion1" rows="10" cols="1" placeholder="Describe a tu músico ideal"></textarea>
+						<label for="etiquetasPosicionPublic">Posición</label>
+						<input type="text" name="etiquetasPosicion" id="etiquetasPosicionPublic" value="" placeholder="Lugar de residencia de tu banda">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="Instrumento que debe dominar">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="Género musical de tu banda">
+						<input type="text" name="etiquetasPosicion" id="" value="" placeholder="URL de una imagen representativa">
 						<div class="botonesEdicion">
 							<button class="aceptar">Publicar</button>
 							<button class="cancelar">Cancelar</button>

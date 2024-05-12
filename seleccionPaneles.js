@@ -59,6 +59,8 @@ botonHome.addEventListener("click", (e) => {
 		selectHome = true;
 		selectBusqueda = false;
 		selectPublicacion = false;
+		botonBuscar.classList.remove("selected");
+		botonPublicar.classList.remove("selected");
 	}
 	if (window.innerWidth < 810) {
 		document.getElementById("linksNavegacion").classList.add("hidden");
@@ -85,6 +87,8 @@ botonBuscar.addEventListener("click", (e) => {
 		selectHome = false;
 		selectBusqueda = true;
 		selectPublicacion = false;
+		botonBuscar.classList.add("selected");
+		botonPublicar.classList.remove("selected");
 	}
 	if (window.innerWidth < 810) {
 		document.getElementById("linksNavegacion").classList.add("hidden");
@@ -109,6 +113,8 @@ botonPublicar.addEventListener("click", (e) => {
 		selectHome = false;
 		selectBusqueda = false;
 		selectPublicacion = true;
+		botonBuscar.classList.remove("selected");
+		botonPublicar.classList.add("selected");
 	}
 	if (window.innerWidth < 810) {
 		document.getElementById("linksNavegacion").classList.add("hidden");
@@ -116,25 +122,4 @@ botonPublicar.addEventListener("click", (e) => {
 		botonSuperior.classList.remove("hidden");
 		botonSuperiorCierre.classList.add("hidden");
 	}
-});
-//-----------------------------probando flujo de ventanas--------------------------------
-document.getElementById("iniciarBusqueda").addEventListener("click", (e) => {
-	document
-		.getElementsByClassName("contenedorCards")[0]
-		.classList.remove("hidden1");
-	/* 	llamarSpinner(); */
-	/* 	renderizarResultados(); */
-});
-
-document.getElementById("masInformacion").addEventListener("click", (e) => {
-	document
-		.getElementsByClassName("displayDetalleCard")[0]
-		.classList.remove("hidden1");
-	document
-		.getElementsByClassName("contenedorCards")[0]
-		.classList.add("hidden1");
-});
-
-document.getElementById("iniciarEdicion").addEventListener("click", (e) => {
-	document.getElementsByClassName("edicionCard")[0].classList.remove("hidden2");
 });

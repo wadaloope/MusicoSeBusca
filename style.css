@@ -141,7 +141,7 @@ header #linksNavegacion #seleccionSecciones {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 @media (min-width: 810px) {
   header #linksNavegacion #seleccionSecciones {
@@ -156,7 +156,7 @@ header #linksNavegacion ul {
   color: #fddbf8;
   font-size: 15px;
 }
-@media (min-width: 810px) {
+@media (min-width: 1024px) {
   header #linksNavegacion ul {
     font-size: 17px;
   }
@@ -172,8 +172,21 @@ header #linksNavegacion ul a:hover {
   color: #9ca3af;
   cursor: pointer;
 }
+@media (min-width: 810px) {
+  header #linksNavegacion ul a {
+    padding: 7px;
+  }
+}
 header #linksNavegacion i {
   width: 1.25rem;
+}
+@media (min-width: 810px) {
+  header #linksNavegacion .selected {
+    border-radius: 7px;
+    background-color: #fddbf8;
+    color: #4b254d;
+    font-weight: 10px;
+  }
 }
 
 .home video {
@@ -310,7 +323,7 @@ header #linksNavegacion i {
   margin: 0;
   border-radius: 0rem;
   border: solid 1px grey;
-  background-color: rgba(255, 255, 255, 0.759);
+  background-color: rgba(248, 212, 244, 0.637);
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -328,7 +341,7 @@ header #linksNavegacion i {
   }
 }
 .seccionBuscar .displayDetalleCard, .seccionPublicar .displayDetalleCard {
-  background-color: rgba(243, 204, 217, 0.903);
+  background-color: rgba(248, 212, 244, 0.637);
   border-radius: 1.1rem;
   margin: auto;
   border-radius: 0rem;
@@ -360,14 +373,23 @@ header #linksNavegacion i {
   width: auto;
   max-width: 682px;
   border-radius: 1rem;
-  padding: 3vh 3vw;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
   background-color: #fedbfe;
+}
+.seccionBuscar .detalleCard h3, .seccionPublicar .detalleCard h3, .seccionBuscar .tarjetaEncontrada h3, .seccionPublicar .tarjetaEncontrada h3 {
+  font-size: 15px;
+}
+@media (min-width: 810px) {
+  .seccionBuscar .detalleCard h3, .seccionPublicar .detalleCard h3, .seccionBuscar .tarjetaEncontrada h3, .seccionPublicar .tarjetaEncontrada h3 {
+    font-size: large;
+  }
 }
 .seccionBuscar .detalleCard .salirDeTarjeta, .seccionPublicar .detalleCard .salirDeTarjeta, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta, .seccionPublicar .tarjetaEncontrada .salirDeTarjeta {
   padding: 6px 2px;
+  margin-bottom: 5px;
 }
 .seccionBuscar .detalleCard .salirDeTarjeta:hover, .seccionPublicar .detalleCard .salirDeTarjeta:hover, .seccionBuscar .tarjetaEncontrada .salirDeTarjeta:hover, .seccionPublicar .tarjetaEncontrada .salirDeTarjeta:hover {
   width: fit-content;
@@ -404,6 +426,7 @@ header #linksNavegacion i {
   width: 60px;
   background-color: #a079a1;
   color: white;
+  width: 100px;
 }
 @media (min-width: 640px) {
   .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
@@ -415,6 +438,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 640px) {
   .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
     width: 80px;
@@ -423,6 +451,11 @@ header #linksNavegacion i {
 .seccionBuscar .detalleCard .aceptar:hover, .seccionPublicar .detalleCard .aceptar:hover, .seccionBuscar .tarjetaEncontrada .aceptar:hover, .seccionPublicar .tarjetaEncontrada .aceptar:hover {
   cursor: pointer;
   background-color: #4b254d;
+}
+@media (min-width: 640px) {
+  .seccionBuscar .detalleCard .aceptar, .seccionPublicar .detalleCard .aceptar, .seccionBuscar .tarjetaEncontrada .aceptar, .seccionPublicar .tarjetaEncontrada .aceptar {
+    width: 140px;
+  }
 }
 .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
   padding: 2px;
@@ -438,6 +471,7 @@ header #linksNavegacion i {
   color: white;
   background-color: #e8d5ea;
   color: rgb(67, 67, 67);
+  width: 100px;
 }
 @media (min-width: 640px) {
   .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
@@ -447,6 +481,11 @@ header #linksNavegacion i {
 @media (min-width: 810px) {
   .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 640px) {
@@ -460,6 +499,11 @@ header #linksNavegacion i {
 }
 .seccionBuscar .detalleCard .cancelar:hover, .seccionPublicar .detalleCard .cancelar:hover, .seccionBuscar .tarjetaEncontrada .cancelar:hover, .seccionPublicar .tarjetaEncontrada .cancelar:hover {
   color: white;
+}
+@media (min-width: 640px) {
+  .seccionBuscar .detalleCard .cancelar, .seccionPublicar .detalleCard .cancelar, .seccionBuscar .tarjetaEncontrada .cancelar, .seccionPublicar .tarjetaEncontrada .cancelar {
+    width: 140px;
+  }
 }
 .seccionBuscar .detalleCard .contenedorEtiquetas, .seccionPublicar .detalleCard .contenedorEtiquetas, .seccionBuscar .tarjetaEncontrada .contenedorEtiquetas, .seccionPublicar .tarjetaEncontrada .contenedorEtiquetas {
   width: 100%;
@@ -480,7 +524,7 @@ header #linksNavegacion i {
     width: 100%;
   }
 }
-.seccionBuscar .edicionCard, .seccionPublicar .edicionCard, .seccionPublicar .tarjetaPublicacion {
+.seccionBuscar .edicionCard, .seccionBuscar .seccionPublicar .tarjetaPublicacion, .seccionPublicar .seccionBuscar .tarjetaPublicacion, .seccionPublicar .edicionCard, .seccionPublicar .tarjetaPublicacion {
   font-family: "Fauna One", serif;
   font-size: small;
   max-width: 682px;
@@ -493,9 +537,18 @@ header #linksNavegacion i {
   border-radius: 1rem;
   background-color: #fedbfe;
 }
+.seccionBuscar .edicionCard label, .seccionPublicar .edicionCard label, .seccionPublicar .tarjetaPublicacion label, .seccionBuscar .edicionCard input, .seccionPublicar .edicionCard input, .seccionPublicar .tarjetaPublicacion input, .seccionBuscar .edicionCard textarea, .seccionPublicar .edicionCard textarea, .seccionPublicar .tarjetaPublicacion textarea {
+  font-size: small;
+}
+@media (min-width: 810px) {
+  .seccionBuscar .edicionCard label, .seccionPublicar .edicionCard label, .seccionPublicar .tarjetaPublicacion label, .seccionBuscar .edicionCard input, .seccionPublicar .edicionCard input, .seccionPublicar .tarjetaPublicacion input, .seccionBuscar .edicionCard textarea, .seccionPublicar .edicionCard textarea, .seccionPublicar .tarjetaPublicacion textarea {
+    font-size: medium;
+  }
+}
 .seccionBuscar .edicionCard textarea, .seccionPublicar .edicionCard textarea, .seccionPublicar .tarjetaPublicacion textarea {
   width: auto;
   border-radius: 7px;
+  border: 1px solid grey;
   padding: 8px;
 }
 .seccionBuscar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicar .edicionCard textarea:focus::-webkit-input-placeholder, .seccionPublicar .tarjetaPublicacion textarea:focus::-webkit-input-placeholder {
@@ -504,8 +557,9 @@ header #linksNavegacion i {
 .seccionBuscar .edicionCard input, .seccionPublicar .edicionCard input, .seccionPublicar .tarjetaPublicacion input {
   width: auto;
   border-radius: 7px;
+  border: 1px solid grey;
   height: 20px;
-  padding: 8px;
+  padding: 10px;
 }
 .seccionBuscar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicar .edicionCard input:focus::-webkit-input-placeholder, .seccionPublicar .tarjetaPublicacion input:focus::-webkit-input-placeholder {
   opacity: 0;
@@ -534,6 +588,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 640px) {
   .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
     width: 80px;
@@ -545,7 +604,7 @@ header #linksNavegacion i {
 }
 @media (min-width: 640px) {
   .seccionBuscar .edicionCard .aceptar, .seccionPublicar .edicionCard .aceptar, .seccionPublicar .tarjetaPublicacion .aceptar {
-    width: 130px;
+    width: 140px;
   }
 }
 .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
@@ -574,6 +633,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 640px) {
   .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
     width: 80px;
@@ -588,21 +652,20 @@ header #linksNavegacion i {
 }
 @media (min-width: 640px) {
   .seccionBuscar .edicionCard .cancelar, .seccionPublicar .edicionCard .cancelar, .seccionPublicar .tarjetaPublicacion .cancelar {
-    width: 130px;
+    width: 140px;
   }
 }
 .seccionBuscar .tarjetaEncontrada, .seccionPublicar .tarjetaEncontrada {
-  height: 390px;
+  height: 400px;
   max-width: 300px;
   justify-content: space-between;
 }
 .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall {
-  height: 210px;
+  height: 190px;
   overflow: hidden;
 }
 .seccionBuscar .tarjetaEncontrada .contenedorImagenSmall p, .seccionPublicar .tarjetaEncontrada .contenedorImagenSmall p {
   max-width: 300px;
-  height: 210px;
   text-overflow: ellipsis;
 }
 .seccionBuscar .filtrosBusqueda, .seccionPublicar .filtrosBusqueda {
@@ -631,6 +694,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .seccionBuscar .filtrosBusqueda select, .seccionPublicar .filtrosBusqueda select {
+    font-size: 0.9rem;
+  }
+}
 .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
   padding: 2px;
   font-family: "Fauna One", serif;
@@ -652,6 +720,11 @@ header #linksNavegacion i {
 @media (min-width: 810px) {
   .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .seccionBuscar .botonesBusqueda .aceptar, .seccionPublicar .botonesBusqueda .aceptar {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 640px) {
@@ -688,6 +761,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 640px) {
   .seccionBuscar .botonesBusqueda .cancelar, .seccionPublicar .botonesBusqueda .cancelar {
     width: 80px;
@@ -715,7 +793,7 @@ header #linksNavegacion i {
   }
 }
 .seccionPublicar .displayDetalleCardPublic {
-  background-color: rgba(243, 204, 217, 0.903);
+  background-color: rgba(248, 212, 244, 0.637);
   border-radius: 1.1rem;
   margin: auto;
   border-radius: 0rem;
@@ -800,6 +878,11 @@ header #linksNavegacion i {
     font-size: 0.8rem;
   }
 }
+@media (min-width: 1024px) {
+  .modalMensaje .mensajePopup .botonesPopup .aceptar {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 640px) {
   .modalMensaje .mensajePopup .botonesPopup .aceptar {
     width: 80px;
@@ -832,6 +915,11 @@ header #linksNavegacion i {
 @media (min-width: 810px) {
   .modalMensaje .mensajePopup .botonesPopup .cancelar {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modalMensaje .mensajePopup .botonesPopup .cancelar {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 640px) {

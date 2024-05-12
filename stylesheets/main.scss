@@ -1,167 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fauna+One&display=swap");
-
-$smallScreen: 640px;
-$mediumScreen: 810px;
-$largeScreen: 1024px;
-$largeFont: 45px;
-$mediumFont: 37px;
-$smallFont: 23px;
-$xsmallFont: 15px;
-$xxsmallFont: 10px;
-$bannerColor: #4b254d;
-$bannerFontColor: #fddbf8;
-$bannerFontHoverColor: #9ca3af;
-$fuentePrincipal: "Fauna One", serif;
-
-@mixin distribucionFilas {
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-@mixin fuenteTitulo {
-	font-family: "Fredericka the Great", serif;
-	font-weight: 400;
-	font-style: normal;
-	color: $bannerFontColor;
-	font-size: $smallFont;
-}
-
-@mixin fuenteSubtitulo {
-	font-family: $fuentePrincipal;
-	font-weight: 400;
-	font-style: normal;
-}
-
-@mixin enlacesEncabezado {
-	color: $bannerFontColor;
-	text-decoration: none;
-	&:hover {
-		color: $bannerFontHoverColor;
-		cursor: pointer;
-	}
-	display: flex;
-	gap: 0.3rem;
-	align-items: center;
-}
-
-@mixin botonMobileMenu {
-	font-size: 1.875rem;
-	cursor: pointer;
-	@media (min-width: $mediumScreen) {
-		display: none;
-		&:hover {
-			color: $bannerFontHoverColor;
-		}
-	}
-}
-
-@mixin estiloSelect {
-	padding: 2px;
-	font-family: $fuentePrincipal;
-	font-size: 0.6rem;
-	color: $bannerColor;
-	border-radius: 5px;
-	border: solid 1px grey;
-	background-color: rgba(255, 255, 255, 0.759);
-	@media (min-width: $smallScreen) {
-		font-size: 0.7rem;
-	}
-	@media (min-width: $mediumScreen) {
-		font-size: 0.8rem;
-	}
-}
-
-@mixin estiloAceptar {
-	@include estiloSelect;
-	padding: 3px 7px;
-	width: 60px;
-	background-color: #a079a1;
-	color: white;
-	@media (min-width: $smallScreen) {
-		width: 80px;
-	}
-	&:hover {
-		cursor: pointer;
-		background-color: $bannerColor;
-	}
-}
-
-@mixin estiloCancelar {
-	@include estiloAceptar;
-	background-color: #e8d5ea;
-	color: rgb(67, 67, 67);
-	&:hover {
-		color: white;
-	}
-}
-
-@mixin minwidthAvisos {
-	@media (min-width: 439px) {
-		min-height: calc((100vh) - (164px));
-		margin-top: 10px;
-	}
-	@media (min-width: 541px) {
-		min-height: calc((100vh) - (164px));
-		margin-top: 10px;
-	}
-	@media (min-width: 636px) {
-		min-height: calc((100vh) - (165px));
-		margin-top: 10px;
-	}
-	@media (min-width: 639px) {
-		min-height: calc((100vh) - (164px));
-		margin-top: 10px;
-	}
-	@media (min-width: 640px) {
-		min-height: calc((100vh) - (170px));
-		margin-top: 10px;
-	}
-	@media (min-width: 792px) {
-		min-height: calc((100vh) - (170px));
-		margin-top: 10px;
-	}
-	@media (min-width: 804px) {
-		min-height: calc((100vh) - (146px));
-		margin-top: 10px;
-	}
-	@media (min-width: 810px) {
-		min-height: calc((100vh) - (194px));
-		margin-top: 10px;
-	}
-	@media (min-width: 837px) {
-		min-height: calc((100vh) - (167px));
-		margin-top: 10px;
-	}
-	@media (min-width: 1024px) {
-		min-height: calc((100vh) - (178px));
-		margin-top: 10px;
-	}
-}
-
-@mixin spanes {
-	padding: 1px 7px;
-	background-color: #a7dff7;
-	border: solid rgb(198, 177, 177) 1px;
-	border-radius: 5px;
-	font-size: $xxsmallFont;
-}
-
-@mixin estiloModal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgba(243, 204, 217, 0.903);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 100;
-	width: 100%;
-	height: 100%;
-}
+@import "googlefonts";
+@import "variables";
+@import "mixins";
 
 * {
 	margin: 0;
@@ -253,7 +92,7 @@ header {
 			display: flex;
 			flex-direction: column;
 			align-items: start;
-			gap: 0.5rem;
+			gap: 0.4rem;
 			@media (min-width: $mediumScreen) {
 				@include distribucionFilas;
 				gap: 4vw;
@@ -264,16 +103,27 @@ header {
 			color: $bannerFontColor;
 			font-size: $xsmallFont;
 
-			@media (min-width: $mediumScreen) {
+			@media (min-width: $largeScreen) {
 				font-size: 17px;
 			}
 
 			a {
 				@include enlacesEncabezado;
+				@media (min-width: $mediumScreen) {
+					padding: 7px;
+				}
 			}
 		}
 		i {
 			width: 1.25rem;
+		}
+		.selected {
+			@media (min-width: $mediumScreen) {
+				border-radius: 7px;
+				background-color: $bannerFontColor;
+				color: $bannerColor;
+				font-weight: 10px;
+			}
 		}
 	}
 }
@@ -348,7 +198,7 @@ header {
 		margin: 0;
 		border-radius: 0rem;
 		border: solid 1px grey;
-		background-color: rgba(255, 255, 255, 0.759);
+		background-color: $containerColor;
 		padding: 10px 20px;
 		display: flex;
 		flex-direction: column;
@@ -364,7 +214,7 @@ header {
 		}
 	}
 	.displayDetalleCard {
-		background-color: rgba(243, 204, 217, 0.903);
+		background-color: $containerColor;
 		border-radius: 1.1rem;
 		margin: auto;
 		border-radius: 0rem;
@@ -392,12 +242,19 @@ header {
 		width: auto;
 		max-width: 682px;
 		border-radius: 1rem;
-		padding: 3vh 3vw;
+		padding: 24px 20px;
 		display: flex;
 		flex-direction: column;
-		gap: 5px;
+		gap: 15px;
+		h3 {
+			font-size: $xsmallFont;
+			@media (min-width: $mediumScreen) {
+				font-size: large;
+			}
+		}
 		.salirDeTarjeta {
 			padding: 6px 2px;
+			margin-bottom: 5px;
 			&:hover {
 				width: fit-content;
 				border-radius: 8px;
@@ -425,9 +282,17 @@ header {
 
 		.aceptar {
 			@include estiloAceptar;
+			width: 100px;
+			@media (min-width: $smallScreen) {
+				width: 140px;
+			}
 		}
 		.cancelar {
 			@include estiloCancelar;
+			width: 100px;
+			@media (min-width: $smallScreen) {
+				width: 140px;
+			}
 		}
 
 		.contenedorEtiquetas {
@@ -457,10 +322,18 @@ header {
 		gap: 5px;
 		border-radius: 1rem;
 		background-color: #fedbfe;
+		label {
+			font-size: small;
+			@media (min-width: $mediumScreen) {
+				font-size: medium;
+			}
+		}
 		textarea {
 			width: auto;
 			border-radius: 7px;
+			border: 1px solid grey;
 			padding: 8px;
+			@extend label;
 			&:focus::-webkit-input-placeholder {
 				opacity: 0;
 			}
@@ -468,8 +341,10 @@ header {
 		input {
 			width: auto;
 			border-radius: 7px;
+			border: 1px solid grey;
 			height: 20px;
-			padding: 8px;
+			padding: 10px;
+			@extend label;
 			&:focus::-webkit-input-placeholder {
 				opacity: 0;
 			}
@@ -478,29 +353,28 @@ header {
 			@include estiloAceptar;
 			width: 100px;
 			@media (min-width: $smallScreen) {
-				width: 130px;
+				width: 140px;
 			}
 		}
 		.cancelar {
 			@include estiloCancelar;
 			width: 100px;
 			@media (min-width: $smallScreen) {
-				width: 130px;
+				width: 140px;
 			}
 		}
 	}
 	.tarjetaEncontrada {
 		@extend .detalleCard;
-		height: 390px;
+		height: 400px;
 		max-width: 300px;
 		justify-content: space-between;
 		.contenedorImagenSmall {
 			@extend .contenedorImagen;
-			height: 210px;
+			height: 190px;
 			overflow: hidden;
 			p {
 				max-width: 300px;
-				height: 210px;
 				text-overflow: ellipsis;
 			}
 		}
@@ -536,7 +410,7 @@ header {
 		min-height: calc(100vh - (128px));
 	}
 	.displayDetalleCardPublic {
-		background-color: rgba(243, 204, 217, 0.903);
+		background-color: $containerColor;
 		border-radius: 1.1rem;
 		margin: auto;
 		border-radius: 0rem;
